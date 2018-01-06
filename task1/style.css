@@ -1,42 +1,108 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: sans-serif;
-  line-height: 1.6em;
-  padding-bottom: 400px;
+    font-family: sans-serif;
+    line-height: 1.6em;
+    padding-bottom: 400px;
 }
 
 .subtask {
-  margin: 20px 0;
-  border: 1px solid lightblue;
-  border-radius: 8px;
-  padding: 16px;
+    margin: 20px 0;
+    border: 1px solid lightblue;
+    border-radius: 8px;
+    padding: 16px;
 }
 
 ul {
-  padding: 0;
-  margin: 0;
-  font-family: sans-serif;
-  color: white;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
 }
 
 ul > li {
-  list-style-type: none;
-  padding: 20px;
-  float: left;
-  background-color: lightpink;
-  width: calc(100%/6);
+    list-style-type: none;
+    padding: 20px;
+    float: left;
+    background-color: lightpink;
+    width: calc(100%/6);
 }
 
 ul > li img {
-  margin: 0 auto;
-  display: block;
+    margin: 0 auto;
+    display: block;
 }
 
 .clearfix {
-  clear: both;
+    clear: both;
 }
 
 /* Вашият CSS от тук надолу */
+
+#subtask2 li:nth-child(odd) {
+    background-color: deepskyblue;
+}
+
+#subtask3 li {
+    transition: all 1s;
+}
+
+#subtask3 li:hover {
+    background-color: deepskyblue;
+    transition: all 1s;
+    transform: rotateY(360deg);
+}
+
+/*
+#subtask4 li::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .8);
+}
+*/
+
+#subtask5 li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#subtask5 li:hover::after {
+    content: "IMAGINE THAT!";
+    position: absolute;
+    color: black;
+    font-weight: bold;
+}
+
+
+
+.subtask ul {
+    display: flex;
+    flex-direction: column;
+}
+
+section ul li {
+    width: 100%;
+}
+
+/*
+@media (min-width:401px) {
+    section ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    ul > li {
+        display: flex;
+    }
+
+    section ul > li > img {
+        flex-basis: 50%;
+    }
+}
+*/
