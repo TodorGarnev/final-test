@@ -27,7 +27,7 @@ ul > li {
     padding: 20px;
     float: left;
     background-color: lightpink;
-    width: calc(100%/6);
+    /*    width: calc(100%/6);*/
 }
 
 ul > li img {
@@ -79,30 +79,25 @@ ul > li img {
 }
 
 
-
-.subtask ul {
-    display: flex;
-    flex-direction: column;
-}
-
 section ul li {
     width: 100%;
 }
 
-/*
+
 @media (min-width:401px) {
-    section ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    ul > li {
-        display: flex;
-    }
-
-    section ul > li > img {
-        flex-basis: 50%;
+    section ul li {
+        width: calc(100%/2);
     }
 }
-*/
+
+@media (min-width:601px) {
+    section ul li {
+        width: calc(100%/3);
+    }
+}
+
+@media (min-width:1001px) {
+    section ul li {
+        width: calc(100%/6);
+    }
+}
