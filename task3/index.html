@@ -13,13 +13,13 @@
     <nav class="float-right">
       <ul class="nav nav-pills" role="tablist">
         <li role="presentation" class="nav-item">
-          <a class="nav-link active" href="#home" aria-controls="home1" role="tab" data-toggle="tab">Home</a>
+          <a class="nav-link active" href="#home" aria-controls="home1" role="tab" data-toggle="tab" data-filed="home">Home</a>
         </li>
         <li role="presentation" class="nav-item">
-          <a class="nav-link" href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a>
+          <a class="nav-link" href="#about" aria-controls="about" role="tab" data-toggle="tab" data-filed="about">About</a>
         </li>
         <li role="presentation" class="nav-item">
-          <a class="nav-link" href="#contact" aria-controls="contact" role="tab" data-toggle="tab">Cntacts</a>
+          <a class="nav-link" href="#contact" aria-controls="contact" role="tab" data-toggle="tab" data-filed="contacts">Contacts</a>
         </li>
       </ul>
     </nav>
@@ -28,18 +28,26 @@
     </div>
   </div>
   <div class="container tab-content">
+      <div class="infostack"></div>
     <section id="home" role="tabpanel" class="tab-pane fade show active">
       <form name="filters" id="filters" class="form-inline">
-        <input name="textFilter" class="form-control m-2" placeholder="Филтрирай по име, храна или любима игра">
-        <button type="button" name="sortByName" class="btn btn-primary m-2">Пордеди по име</button>
-        <button type="button" name="sortByAge" class="btn btn-success m-2">Пордеди по възраст</button>
-        <select name="gameFilter" class="form-control m-2">
+        <input name="textFilter" class="form-control m-2 onlyinput" placeholder="Филтрирай по име, храна или любима игра">
+        <button type="button" name="sortByName" class="btn btn-primary m-2 buttonone" data-category="name">Пордеди по име</button>
+        <button type="button" name="sortByAge" class="btn btn-success m-2 buttontwo">Пордеди по възраст</button>
+        <select name="gameFilter" class="form-control m-2 lista">
           <option value="" readonly>Изберете игра</option>
+            <option value="1" class="izbor" data-category="LEGO"> "LEGO"</option>
+            <option value="2" class="izbor" data-category="кукла Барби">"кукла Барби"</option>
+            <option value="3" class="izbor" data-category="футбол">"футбол"</option>
+            <option value="4" class="izbor" data-category="кукли">"кукли"</option>
+            <option value="5" class="izbor" data-category="криеница" >"криеница"</option>
+            <option value="6" class="izbor" data-category="фризби">"фризби"</option>
         </select>
       </form>
+        <div class="modalloader"></div>
 
       <h2 class="my-4">Запознайте се с нашите малки калпазани:</h2>
-      <div id="kids" class="row">
+      <div id="kids" class="row kids_container">
         <div class="kid col-md-6 mb-5">
           <div class="card">
             <div class="card-heading bg-info text-white">
@@ -82,6 +90,8 @@
             </div>
           </div>
         </div>
+          
+          
       </div>
     </section>
 
@@ -96,6 +106,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+<script src="javascript.js"></script>
 </body>
 
 </html>

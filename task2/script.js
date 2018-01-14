@@ -81,7 +81,7 @@ var items = [
 
 var wow = items.sort(function (a, b) {
   return a.price - b.price;
-});
+//});
 //console.log(wow);
 
 
