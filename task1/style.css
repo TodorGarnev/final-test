@@ -40,3 +40,87 @@ ul > li img {
 }
 
 /* Вашият CSS от тук надолу */
+
+li:nth-child(even) {
+    background: lightblue;
+}
+
+li:hover {
+    transform: rotateY(360deg);
+    transition: 1s;
+    background-color: yellow;
+}
+
+
+
+
+li{
+    position: relative;
+}
+li:hover:after {
+    content:"IMAGINE THAT!";
+    font-size: 13px;
+    color: #88857d;
+    position: absolute;
+    text-align: center;
+    top:15px;
+    left:5px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+@media (min-width:1000px){
+    
+    img{
+        width: 120px;
+    }
+}
+@media (min-width:600px) and (max-width:999px){
+    ul{height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    ul > li {
+  width: calc(100%/3);
+}
+    img{
+        width:inherit;
+    }
+}
+
+@media (min-width:400px) and (max-width:599px){
+    ul{height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    ul > li {
+  width: calc(100%/2);
+}
+    img{
+        width:inherit;
+    }
+}
+
+@media (max-width:399px){
+ul{height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    ul > li {
+  width: 100%;
+}
+    img{
+        width:inherit;
+    }
+}
+}
